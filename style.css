@@ -29,12 +29,32 @@ body {
 }
 
 h1 {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-size: 3em;
   font-family: "Righteous", serif;
   text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.6);
   color: #fff;
   margin-top: 20px;
+}
+
+.newArt {
+  margin-bottom: 40px;
+  color: #a2d729;
+  font-size: 3em;
+  cursor: pointer;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.6);
+  transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1),
+    text-shadow 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.newArt.rotated {
+  transform: rotate(360deg) scale(1.1);
+  text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.newArt:hover {
+  transform: scale(1.1);
+  text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.6);
 }
 
 .mainCont {
@@ -63,6 +83,7 @@ h1 {
 .artWork {
   width: 90%;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .artArtist {
@@ -70,18 +91,22 @@ h1 {
   font-weight: 500;
   width: 85%;
 }
+
 .artMedium {
   width: 85%;
   border-bottom: 1px dashed #222a36;
   padding-bottom: 20px;
 }
+
 .artYear {
   text-align: center;
   padding-bottom: 20px;
 }
 
 .descriptionBtn,
-.acquisitionBtn {
+.acquisitionBtn,
+.dimensionsBtn,
+.categoryBtn {
   display: flex;
   align-items: center;
   font-weight: bold;
@@ -89,10 +114,41 @@ h1 {
   margin-top: 20px;
 }
 
-.artDescription {
+.artDescription,
+.artDimensions,
+.artCategory,
+.artAcquisition {
   width: 90%;
   margin-top: 10px;
   text-align: center;
+}
+
+.fullScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.closeFull {
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.fullScreen img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
 }
 
 .hidden {
@@ -161,5 +217,17 @@ footer span {
 @keyframes spinner-o824ag {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .artWork {
+    width: auto;
+    height: 500px;
+    max-width: 90%;
+  }
+
+  .mainCont {
+    max-width: 1000px;
   }
 }

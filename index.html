@@ -18,7 +18,12 @@
     <script src="app.js" defer></script>
   </head>
   <body>
+    <div class="fullScreen hidden">
+      <span class="material-symbols-outlined closeFull"> close </span>
+      <img alt="artwork" src="" />
+    </div>
     <h1>ArtSense</h1>
+    <span class="material-symbols-outlined newArt"> sync </span>
     <section class="mainCont">
       <h2 class="artName"></h2>
       <span class="artYear"></span>
@@ -31,24 +36,38 @@
       <img class="artWork" alt="artwork" src="" />
       <span class="artArtist"></span>
       <span class="artMedium hidden"></span>
+
       <span class="descriptionBtn hidden"
-        >Description
-        <span class="material-symbols-outlined arrow-down">
-          arrow_drop_down
-        </span></span
+        >Description<span class="material-symbols-outlined arrow-down"
+          >arrow_drop_down</span
+        ></span
       >
       <p class="artDescription hidden"></p>
+
+      <span class="categoryBtn hidden"
+        >Category<span class="material-symbols-outlined arrow-down"
+          >arrow_drop_down</span
+        ></span
+      >
+      <p class="artCategory hidden"></p>
+
       <span class="acquisitionBtn hidden"
-        >Acquisition
-        <span class="material-symbols-outlined arrow-down">
-          arrow_drop_down
-        </span></span
+        >Acquisition<span class="material-symbols-outlined arrow-down"
+          >arrow_drop_down</span
+        ></span
       >
       <p class="artAcquisition hidden"></p>
+
+      <span class="dimensionsBtn hidden"
+        >Dimensions<span class="material-symbols-outlined arrow-down"
+          >arrow_drop_down</span
+        ></span
+      >
+      <p class="artDimensions hidden"></p>
     </section>
     <footer>
-      <span>Made with ♥️ by Aram Hekimian</span
-      ><span>All data comes from The Art Institute of Chicago</span>
+      <span>Made with ♥️ by Aram Hekimian</span>
+      <span>All data comes from The Art Institute of Chicago</span>
     </footer>
   </body>
 </html>
