@@ -22,7 +22,7 @@ const dimArrow = dimensionsBtn.querySelector(".arrow-down");
 const catArrow = categoryBtn.querySelector(".arrow-down");
 
 const artData = {};
-let rotation = 0; // Initialize rotation variable
+let rotation = 0;
 
 function renderArtData() {
   artName.innerText = artData.title;
@@ -71,7 +71,6 @@ function renderProperty(value, label, btnElement, textElement, arrowElement) {
   if (value) {
     textElement.innerHTML = value;
     btnElement.classList.remove("hidden");
-    // Check if the event listener is already attached
     if (!btnElement.dataset.clickEventAttached) {
       btnElement.addEventListener("click", () => {
         textElement.classList.toggle("hidden");
@@ -79,13 +78,11 @@ function renderProperty(value, label, btnElement, textElement, arrowElement) {
           ? (arrowElement.innerText = "arrow_drop_up")
           : (arrowElement.innerText = "arrow_drop_down");
       });
-      // Set a flag to indicate that event listener is attached
       btnElement.dataset.clickEventAttached = true;
     }
   } else {
     btnElement.classList.add("hidden");
     textElement.classList.add("hidden");
-    // Reset the event listener flag
     btnElement.dataset.clickEventAttached = false;
   }
 }
