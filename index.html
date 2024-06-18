@@ -3,9 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Art Finder</title>
+    <title>ArtSense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <h1>ArtSense</h1>
+    <section class="mainCont">
+      <h2 class="artName"></h2>
+      <span class="artYear"></span>
+      <div class="spinner hidden">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <img class="artWork" alt="artwork" src="" />
+      <span class="artArtist"></span>
+      <span class="artMedium hidden"></span>
+      <span class="descriptionBtn hidden"
+        >Description
+        <span class="material-symbols-outlined arrow-down">
+          arrow_drop_down
+        </span></span
+      >
+      <p class="artDescription hidden"></p>
+      <span class="acquisitionBtn hidden"
+        >Acquisition
+        <span class="material-symbols-outlined arrow-down">
+          arrow_drop_down
+        </span></span
+      >
+      <p class="artAcquisition hidden"></p>
+    </section>
+    <footer>
+      <span>Made with ♥️ by Aram Hekimian</span
+      ><span>All data comes from The Art Institute of Chicago</span>
+    </footer>
+  </body>
 </html>
